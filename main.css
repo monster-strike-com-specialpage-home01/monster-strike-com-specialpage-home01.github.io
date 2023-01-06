@@ -1,51 +1,130 @@
-html {
-    overflow-x: hidden;
-    overflow-y: scroll; -webkit-overflow-scrolling: touch
-}   
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans+JP & display=swap');
 
 body {
     margin: 0;
     background-color: #b80008;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+div {
+    display: block;
 }
 
 img {
     vertical-align: top;
 }
 
-div {
-    margin: 0;
-    padding: 0;
-}
-
-.topImg {
-    height: 16vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-.top {
-    width: 100%;
+header {
+    width: 84%;
+    margin-left: 8%;
     position: relative;
 }
 
-.topImg2 {
-    width: 45%;
-    right: 27.5%;
+.topImg {
+    width: 100%;
+}
+
+.logoImg {
+    width: 15%;
+    left: 42.5%;
+    bottom: 2.5%;
     position: absolute;
 }
 
-.border {
+.borderBox {
     width: 100%;
+    height: 8px;
+    background: url(pc_border.jpg) center repeat-x;
 }
 
-.borderImg {
+.contentWrapper {
     width: 100%;
+    height: auto;
+    background: url(pc_top_bg.jpg) top center no-repeat #2b2b2d;
+    background-size: 100% auto;
+    z-index: 50;
 }
 
-.contentBox {
-    background-image: url(https://www.monster-strike.com/assets/images/common/sp_top_bg.jpg);
-    height: 50vh;
+.newsBox {
+    width: 634px;
+    margin: 0 auto;
+    z-index: 51;
+}
+
+.newsHeader {
     width: 100%;
-    background-size: cover;
-    background-position: center center;
+    height: 28px;
+    background: url(pc_news_header.png) top center no-repeat;
+    z-index: 52;
+}
+
+.newsContentBox {
+    width: 100%;
+    height: auto;
+    background: url(pc_news_content.png) top center repeat-y;
+    z-index: 52;
+}
+
+.newsFooter {
+    width: 100%;
+    height: 8px;
+    background: url(pc_news_footer.png) top center no-repeat;
+    z-index: 52;
+}
+
+.newsFooterAdd {
+    width: 100%;
+    height: 12px;
+    background: url(pc_news_footer_add.png) top center no-repeat;
+    z-index: 52;
+}
+
+.mainContent  {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.time {
+    font-size: 12px;
+    margin-top: -0.01px;
+    margin-left: 5%;
+}
+
+.title {
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: solid 4px #264480;
+}
+
+.mainText {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 14px;
+}
+
+label {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.submitButton {
+    width: 30%;
+    margin-left: 35%;
+    display       : inline-block;
+    border-radius : 5%;          
+    font-size     : 14px;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 12px 12px;   
+    background    : #000066;     
+    color         : #ffffff;     
+    line-height   : 1em;         
+    transition    : .3s;         
+    border        : 2px solid #000066;    
+  }
+.submitButton:hover {
+    color         : #000066;     
+    background    : #ffffff;     
 }

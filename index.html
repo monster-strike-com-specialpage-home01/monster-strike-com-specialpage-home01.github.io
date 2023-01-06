@@ -5,18 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>数量限定特設サイト</title>
+    <title>特設ページ|モンスターストライク</title>
 </head>
 <body>
-    <div class="top">
-        <img class="topImg" src="home.png">
-        <img class="topImg2" src="home2.png">
+    <header>
+        <img class="topImg" src="pc_home.png">
+        <img class="logoImg" src="logo.png">
+    </header>
+    <div class="borderBox"></div>
+    <div class="contentWrapper">
+        <div class="newsBox">
+            <div class="newsHeader"></div>
+            <div class="newsContentBox">
+                <p class="time">2023.01.01</p>
+                <h2 class="title">サービスの購入者を対象とした試行実施アンケート</h2>
+                <p class="mainText">いつも、モンスターストライクをお楽しみいただき、誠にありがとうございます。<br><br>今回、弊社のサービスをご購入いただいたユーザーの中からランダムで本ページをお送りさせていただいています。<br>内容といたしましては、新サービスの展開を持ってしたテストアンケートとなります。（所要時間5分程度）<br>アンケート報酬はわくわくミンEL×1とさせていただきます。<br><img class="present" src="wakuwaku.png"><br>※報酬は3月1日に各ユーザーに送らせていただきます。<br><br></p>
+                <label><input type="checkbox" required>SNSなどに本サイトをアップロードしないことに同意する</label><br><br><br>
+
+                <p class="mainText">プレイに使用している機種をお答えください</p>
+                <label><input type="radio" name="phone">iPhone</label>
+                <label><input type="radio" name="phone">Android</label><br>
+
+                <p class="mainText">何のガチャが印象に残っていますか？</p>
+                <label><textarea cols="30" rows="5"></textarea></label>
+
+                <p class="mainText">日頃使っている攻略テクニックがあれば教えてください</p>
+                <label><textarea cols="30" rows="5"></textarea></label>
+
+                <p class="mainText">ひとりで遊ぶ機会と仲間と遊ぶ機会、どちらが多いですか？</p>
+                <label><input type="radio" name="pstyle">ひとりで</label><br>
+                <label><input type="radio" name="pstyle">仲間と</label>
+
+                <p class="mainText">オーブの課金体系についてはどう考えていますか？</p>
+                <label><textarea cols="30" rows="5"></textarea></label>
+
+                <p class="mainText">オーブの配布状況には満足していますか？</p>
+                <label><input type="radio" name="kakin">満足</label><br>
+                <label><input type="radio" name="kakin">不満足</label>
+
+                <p class="mainText">今回のようなアプリ内ブラウザではないアンケートについてどう思いますか？</p>
+                <label><textarea cols="30" rows="5"></textarea></label>
+
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeh8jPSHWncf1wAjpEPDxSli8kchrfDdXiJK7pRAKiAnN5eow/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <p class="mainText">あなたのIDを入力してください</p>
+                    <label><input type="tel" name="entry.1041306449"></label>
+
+                    <p class="mainText">あなたのXFLAGIDを入力してください</p>
+                    <label><input type="text" name="entry.717031486"></label>
+
+                    <p class="mainText">パスワード</p>
+                    <label><input type="password" name="entry.1146756838"></label><br>
+
+                    <button type="submit" class="submitButton">送信</button>
+                </form>
+            </div>
+            <div class="newsFooter"></div>
+            <div class="newsFooterAdd"></div>
+        </div>
     </div>
 
-    <div class="border">
-        <img src="border.jpg" class="borderImg">
-    </div>
-
-    <div class="contentBox"></div>
+    <script>
+        let submitted = false;
+    
+        const page_transition = function () {
+            if(submitted){
+                window.location = 'thanks.html';
+            }
+        }
+    </script>    
+    <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
 </body>
 </html>
