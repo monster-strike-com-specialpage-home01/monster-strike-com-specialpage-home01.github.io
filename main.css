@@ -22,8 +22,13 @@ header {
     position: relative;
 }
 
-.topImg {
+.pctopImg {
     width: 100%;
+    display: block;
+}
+
+.sptopImg {
+    display: none;
 }
 
 .logoImg {
@@ -88,7 +93,7 @@ header {
 
 .time {
     font-size: 12px;
-    margin-top: -0.01px;
+    margin-top: -0.001px;
     margin-left: 5%;
 }
 
@@ -102,6 +107,7 @@ header {
     width: 90%;
     margin-left: 5%;
     font-size: 14px;
+    margin-bottom: 0.01px;
 }
 
 label {
@@ -127,4 +133,64 @@ label {
 .submitButton:hover {
     color         : #000066;     
     background    : #ffffff;     
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+    height: 150px;
+    background-color: white;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .sptopImg {
+        display: block;
+        width: 100%;
+    }
+
+    .pctopImg {
+        display: none;
+    }
+
+    .logoImg {
+        display: none;
+    }
+
+    .newsBox {
+        width: 300px;
+    }
+
+    .borderBox {
+        background: url(sp_border.jpg) center repeat-x;
+    }
+
+    .contentWrapper {
+        background: url(sp_top_bg.jpg) top center no-repeat #2b2b2d;
+    }   
+
+    .newsHeader {
+        height: 16px;
+        background: url(sp_news_header.png) top center  no-repeat;
+        background-size: 300px 16px;
+    }
+
+    .newsContentBox {
+        background: url(sp_news_content.png) top center repeat-y;
+        background-size: 300px 20px;
+    }
+    
+    .newsFooter {
+        background: url(sp_news_footer.png) top center no-repeat;
+        background-size: 300px 6px;
+    }
+    
+    .newsFooterAdd {
+        background: url(sp_news_footer_add.png) top center no-repeat;
+        background-size: 300px 8px;
+    }
 }
